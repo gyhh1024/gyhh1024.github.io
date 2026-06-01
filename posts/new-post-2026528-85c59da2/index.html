@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Hello world — gyhh1024.github.io">
+<title>Hello world — gyhh1024.github.io</title>
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/highlight.css">
+<link rel="alternate" type="application/rss+xml" title="gyhh1024.github.io RSS" href="/feed.xml">
+<style>
+/* Inline KaTeX essential styles */
+.katex{font-size:1.1em;text-rendering:auto;font-family:'KaTeX_Main','Times New Roman',serif;line-height:1.2;text-indent:0}
+.katex *{-ms-high-contrast-adjust:none!important;border-color:currentColor}
+.katex .katex-html>.newline{display:block}
+.katex .base{position:relative;display:inline-block;white-space:nowrap;width:min-content}
+.katex .strut{display:inline-block}
+.katex .mathrm{font-style:normal}
+.katex .textit{font-style:italic}
+.katex .mathit{font-family:'KaTeX_Math';font-style:italic}
+.katex .mathbf{font-family:'KaTeX_Main';font-weight:700}
+.katex .amsrm{font-family:'KaTeX_AMS'}
+.katex .mathbb{font-family:'KaTeX_AMS'}
+.katex .mathcal{font-family:'KaTeX_Caligraphic'}
+.katex .mathfrak{font-family:'KaTeX_Fraktur'}
+.katex .mathtt{font-family:'KaTeX_Typewriter'}
+.katex .mathscr{font-family:'KaTeX_Script'}
+.katex .mathsf{font-family:'KaTeX_SansSerif'}
+.katex .mainit{font-family:'KaTeX_Main';font-style:italic}
+.math-display{display:block;margin:1em 0;overflow-x:auto;overflow-y:hidden}
+.math-inline{display:inline-block;white-space:nowrap}
+</style>
+<script>
+(function(){function r(a,b){return a.replace(/[^\x00-\x7F]/g,b)}function s(a){return a.replace(/[^ -~]/g,function(b){return"&#x"+b.charCodeAt(0).toString(16)+";"})}
+(function(){var e=document.querySelectorAll(".math-inline,.math-display");if(e.length===0)return;
+var t=document.createElement("link");t.rel="stylesheet";t.href="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.css";
+t.onload=function(){var d=document.createElement("script");d.src="https://cdn.jsdelivr.net/npm/katex@0.16/dist/katex.min.js";
+d.onload=function(){try{e.forEach(function(m){var l=m.getAttribute("data-latex");if(l){var h=decodeURIComponent(l);
+try{var c=m.classList.contains("math-display")?"displayMode":"inline";if(!h.trim())return;
+katex.render(h,m,{throwOnError:false,displayMode:c==="displayMode",trust:false})}catch(n){m.textContent=h}}})}catch(n){}};
+document.head.appendChild(d)};document.head.appendChild(t);t.onerror=function(){e.forEach(function(m){m.textContent=m.getAttribute("data-latex")||""})}})()})();
+</script>
+</head>
+<body>
+<div class="progress-bar" id="progressBar"></div>
+<div class="wrapper">
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <a href="/" class="site-title">gyhh1024.github.io</a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/categories/">Categories</a>
+        <a href="/tags/">Tags</a>
+        <a href="/feed.xml">RSS</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <article class="post-full">
+<header class="post-header">
+  <h1 class="post-title">Hello world</h1>
+  <div class="post-meta">
+    <time datetime="2026-05-28">2026-05-28</time>
+    <span>&middot;</span>
+    <span>1 min read</span>
+    
+    
+  </div>
+</header>
+<div class="post-content">
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+int main() {
+   printf("hello world");
+   return 0;
+}
+</code></pre>
+
+</div>
+<div class="author-block">
+  <div class="avatar">GY</div>
+  <div class="info">
+    <h4>gyhh1024</h4>
+    <p>Thanks for reading. Find more posts on the <a href="/">homepage</a>.</p>
+  </div>
+</div>
+</article>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/categories/">Categories</a>
+      <a href="/tags/">Tags</a>
+      <a href="/feed.xml">RSS</a>
+    </div>
+    <p>&copy; 2026 gyhh1024.github.io. Powered by BlogGit.</p>
+  </footer>
+</div>
+<script>
+(function(){
+  // Reading progress bar
+  var bar=document.getElementById('progressBar');
+  if(bar){window.addEventListener('scroll',function(){var h=document.documentElement;var st=h.scrollTop||document.body.scrollTop;var sh=h.scrollHeight-h.clientHeight;bar.style.width=sh>0?(st/sh*100)+'%':'0'},{passive:true})}
+
+  // Sticky header shadow
+  var hdr=document.getElementById('siteHeader');
+  if(hdr){window.addEventListener('scroll',function(){hdr.classList.toggle('scrolled',window.scrollY>10)},{passive:true})}
+
+  // Scroll reveal animation
+  var observer=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:.1});
+  document.querySelectorAll('.post-card,.hero,.cat-nav,.author-block').forEach(function(el){el.classList.add('reveal');observer.observe(el)});
+})();
+</script>
+</body>
+</html>
